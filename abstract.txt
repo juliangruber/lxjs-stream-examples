@@ -1,0 +1,24 @@
+composibility
+
+realtime is just full duplex.
+the original flow control.
+
+Node already has lots of abtractions for handling full duplex streams.
+Let's just use those.
+
+What should we look for in abstractions to handle streams?
+
+* shoe
+* mux-demux
+* pipe-able dnode
+* emit-stream
+* through
+* JSONStream
+* pause-stream
+* concat-stream
+
+and all of these just work with browserify so you can use the same streaming
+abstractions browser-side
+
+http streams too!
+* dnode over http
