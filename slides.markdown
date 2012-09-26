@@ -17,6 +17,8 @@ http://cm.bell-labs.com/who/dmr/mdmpipe.html
 
 * fs.createReadStream()
 
+![readable](images/readable.png)
+
 `example/readable`
 
 # writable
@@ -24,6 +26,8 @@ http://cm.bell-labs.com/who/dmr/mdmpipe.html
 * fs.createWriteStream()
 * concat-stream
 * delta-stream
+
+![writable](images/writable.png)
 
 `example/writable`
 
@@ -35,6 +39,8 @@ filters, buffering
 
 * zlib.createGzip()
 * through
+
+![through](images/through.png)
 
 `example/through`
 
@@ -93,15 +99,15 @@ When you see `a.pipe(b).pipe(a)` you've probably got a duplex stream.
 
 ![gossip protocol](images/gossip_protocol.png)
 
+(use case: web server peering)
+
 `example/scuttlebutt`
 
 # event streams
 
 * emit-stream
 
-![emit-stream 0](images/emit_stream_0.png)
-
-![emit-stream 1](images/emit_stream_1.png)
+![emit-stream](images/emit_stream.gif)
 
 `example/emit-stream`
 
@@ -121,6 +127,8 @@ When you see `a.pipe(b).pipe(a)` you've probably got a duplex stream.
 * sorta
 * graph-stream
 
+![shoe](images/shoe.png)
+
 `example/shoe`
 
 # freestyle stream livecoding demo
@@ -132,6 +140,8 @@ let's build a streaming webapp that:
 
 FROM SCRATCH. OK GO.
 
+
+
 `example/freestyle`
 
 1. npm install all the things
@@ -139,3 +149,5 @@ FROM SCRATCH. OK GO.
 2. write the code
 
 3. the third step is you're done
+
+![eof](images/process_exit.png)
