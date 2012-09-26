@@ -137,10 +137,12 @@ let's build a streaming webapp that:
 * synchronizes state across all users
 * listens on a server-side event emitter
 * has an rpc control interface
+* all as streams over mux-demux
+* in node and the browser
 
 FROM SCRATCH. OK GO.
 
-
+![eof](images/freestyle.png)
 
 `example/freestyle`
 
