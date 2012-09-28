@@ -8,6 +8,7 @@ module.exports = function () {
 function Box () {
     var self = this;
     var div = self.element = document.createElement('div');
+    div.className = 'box';
     var pressed = false;
     
     div.addEventListener('mousedown', function (ev) {
@@ -17,6 +18,7 @@ function Box () {
         };
     });
     
+    var to;
     div.addEventListener('mousemove', function (ev) {
         if (!pressed) return;
         
@@ -25,7 +27,10 @@ function Box () {
             y : ev.clientY - pressed.y
         };
         self.move(pos);
-        self.emit('position', pos);
+        if (!to) setTimeout(function () {
+            self.emit('position', { x : self.x, y : self.y });
+            to = null;
+        }, 250);
     });
     
     div.addEventListener('mouseup', function (ev) {

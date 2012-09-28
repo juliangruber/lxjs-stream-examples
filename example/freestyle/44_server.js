@@ -5,6 +5,8 @@ var emitStream = require('emit-stream');
 var EventEmitter = require('events').EventEmitter;
 var emitter = new EventEmitter;
 
+var dnode = require('dnode');
+
 function createStream () {
     var MuxDemux = require('mux-demux');
     var mdm = new MuxDemux;
@@ -17,6 +19,11 @@ function createStream () {
     });
     
     process.nextTick(function () {
+        var d = dnode({
+            loud : function (s, cb) { cb(s.toUpperCase()) }
+        });
+        d.pipe(mdm.createStream('dnode')).pipe(d);
+        
         ms.pipe(mdm.createStream('state')).pipe(ms);
         es.pipe(mdm.createStream('events')).pipe(es);
         model.set('connections', (model.get('connections') || 0) + 1);

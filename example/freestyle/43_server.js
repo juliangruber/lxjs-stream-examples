@@ -5,6 +5,8 @@ var emitStream = require('emit-stream');
 var EventEmitter = require('events').EventEmitter;
 var emitter = new EventEmitter;
 
+var dnode = require('dnode');
+
 function createStream () {
     var MuxDemux = require('mux-demux');
     var mdm = new MuxDemux;
@@ -14,6 +16,10 @@ function createStream () {
     
     mdm.on('connection', function (c) {
         c.pipe({ state : ms, events : es }[c.meta]).pipe(c);
+    });
+    
+    var d = dnode({
+        loud : function (s, cb) { cb(s.toUpperCase) });
     });
     
     process.nextTick(function () {

@@ -1,7 +1,7 @@
 <html>
 <head>
 <style>
-    div {
+    .box {
         position: absolute;
         left: 100;
         top: 100;
@@ -9,9 +9,18 @@
         height: 100px;
         width: 100px;
     }
+    #connections {
+        font-weight: bold;
+    }
+    #log {
+        font-family: monospace;
+        white-space: pre;
+    }
 </style>
 </head>
 <body>
+<div id="connections"></div>
+<div id="log"></div>
 <script src="bundle.js"></script>
 </body>
 </html>
