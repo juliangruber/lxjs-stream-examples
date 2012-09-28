@@ -20,6 +20,7 @@ box.on('position', function (pos) {
 });
 
 md.on('connection', function (c) {
+  console.log('connection!')
     if (c.meta === 'dnode') {
         var d = dnode();
         d.on('remote', function (remote) {
@@ -31,6 +32,7 @@ md.on('connection', function (c) {
     }
     else if (c.meta === 'state') {
         c.pipe(model.createStream()).pipe(c);
+        c.on('data', console.log.bind(console))
     }
     else if (c.meta === 'events') {
         var em = emitStream(c);

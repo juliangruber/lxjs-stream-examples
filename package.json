@@ -1,0 +1,38 @@
+{
+  "name": "lxjs-stream-examples",
+  "version": "0.0.0",
+  "description": "harnessing-streams",
+  "main": "timer.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/lxjs-stream-examples.git"
+  },
+  "keywords": [
+    "streams",
+    "talk",
+    "presentation",
+    "lxjs"
+  ],
+  "author": "James Halliday",
+  "license": "BSD",
+  "dependencies": {
+    "scuttlebutt": "~3.2.4",
+    "emit-stream": "~0.1.0",
+    "mux-demux": "~3.3.2",
+    "browserify": "~1.16.1",
+    "shoe": "0.0.7",
+    "dnode": "~1.0.1",
+    "ecstatic": "~0.1.6",
+    "request": "~2.11.4",
+    "inherits": "~1.0.0"
+  },
+  "scripts": {
+    "build": "browserify example/freestyle/47_browser.js -o example/freestyle/static/bundle.js --debug"
+  }
+}
