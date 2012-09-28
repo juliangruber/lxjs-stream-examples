@@ -11,7 +11,6 @@ function createStream () {
     
     var ms = model.createStream();
     var es = emitStream(emitter);
-    
     mdm.on('connection', function (c) {
         c.pipe({ state : ms, events : es }[c.meta]).pipe(c);
     });

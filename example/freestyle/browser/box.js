@@ -12,6 +12,7 @@ function Box () {
     var pressed = false;
     
     div.addEventListener('mousedown', function (ev) {
+        ev.stopPropagation();
         pressed = {
             x : ev.clientX - (self.x || 100),
             y : ev.clientY - (self.y || 100)
@@ -20,6 +21,7 @@ function Box () {
     
     var to;
     div.addEventListener('mousemove', function (ev) {
+        ev.stopPropagation();
         if (!pressed) return;
         
         var pos = {
@@ -34,6 +36,7 @@ function Box () {
     });
     
     div.addEventListener('mouseup', function (ev) {
+        ev.stopPropagation();
         pressed = false;
     });
 }

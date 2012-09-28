@@ -3,10 +3,6 @@ writable
 through
 pause
 JSONStream
-duplexer
 scuttlebutt
-emit-stream
-dnode
-mux-demux
 shoe
 freestyle

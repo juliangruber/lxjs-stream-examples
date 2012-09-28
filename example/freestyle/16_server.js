@@ -11,10 +11,14 @@ function createStream () {
     
     var ms = model.createStream();
     var es = emitStream(emitter);
+    mdm.on('connection', function (c) {
+        c.pipe({ state : ms, events : es }[c.meta]).pipe(c);
+    });
     
     process.nextTick(function () {
         ms.pipe(mdm.createStream('state')).pipe(ms);
         es.pipe(mdm.createStream('events')).pipe(es);
+        
         model.set('connections', (model.get('connections') || 0) + 1);
     });
     

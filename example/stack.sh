@@ -6,7 +6,7 @@ basedir=$(node <<EOF
 EOF
 )
 
-slide_number=0
+slide_number=-1
 i=0
 for slide in $(cat order.txt); do
     slides[$i]=$slide
