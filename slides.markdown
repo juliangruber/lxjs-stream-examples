@@ -139,8 +139,7 @@ let's build a streaming webapp that:
 * has an rpc control interface
 * all as streams over mux-demux
 * in node and the browser
-
-FROM SCRATCH. OK GO.
+* across multiple servers
 
 ![eof](images/freestyle.png)
 
