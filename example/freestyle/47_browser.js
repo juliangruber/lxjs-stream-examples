@@ -40,7 +40,7 @@ md.on('connection', function (c) {
         });
         em.on('part', function (addr) {
             document.querySelector('#log').textContent
-                += 'join ' + JSON.stringify(addr) + '\n';
+                += 'part ' + JSON.stringify(addr) + '\n';
         });
     }
 });
