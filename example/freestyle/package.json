@@ -1,0 +1,15 @@
+{
+  "name": "lxjs-stream-examples",
+  "version": "0.0.1",
+  "dependencies": {
+    "dnode": "*",
+    "emit-stream": "*",
+    "mux-demux": "*",
+    "scuttlebutt": "*",
+    "ecstatic": "*",
+    "inherits": "*",
+    "pause-stream": "*",
+    "shoe": "*",
+    "request": "*"
+  }
+}
